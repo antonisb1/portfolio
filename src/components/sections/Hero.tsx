@@ -125,22 +125,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <button
-        onClick={() =>
-          document
-            .getElementById("about")
-            ?.scrollIntoView({ behavior: "smooth" })
-        }
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 hover:text-cyan-400 transition-colors group"
-      >
-        <span className="font-mono text-xs tracking-widest">SCROLL</span>
-        <ArrowDown
-          size={16}
-          className="animate-bounce group-hover:text-cyan-400"
-        />
-      </button>
     </section>
   );
 }
