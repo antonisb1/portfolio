@@ -1,5 +1,5 @@
-import { Terminal, Heart } from 'lucide-react';
-import { PERSON, NAV_ITEMS } from '../../data';
+import { Terminal, Heart } from "lucide-react";
+import { PERSON, NAV_ITEMS } from "../../data";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -14,8 +14,11 @@ export default function Footer() {
               <Terminal size={14} className="text-cyan-400" />
             </div>
             <span className="font-mono text-sm text-slate-400">
-              {PERSON.name.split(' ').map(n => n[0]).join('')}
-              <span className="text-cyan-400">.</span>dev
+              {PERSON.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+              <span className="text-cyan-400">.</span>portfolio
             </span>
           </div>
 
@@ -25,8 +28,10 @@ export default function Footer() {
               <button
                 key={item.href}
                 onClick={() => {
-                  const id = item.href.replace('#', '');
-                  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+                  const id = item.href.replace("#", "");
+                  document
+                    .getElementById(id)
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="px-3 py-1.5 font-mono text-xs text-slate-500 hover:text-cyan-400 transition-colors"
               >
@@ -39,7 +44,7 @@ export default function Footer() {
           <p className="font-mono text-xs text-slate-600 flex items-center gap-1.5">
             © {year} {PERSON.name}
             <span className="text-slate-700">·</span>
-            Built with <Heart size={10} className="text-rose-400" /> in Athens
+            Built with React
           </p>
         </div>
       </div>

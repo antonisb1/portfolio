@@ -1,7 +1,7 @@
-import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
-import Section, { SectionHeader } from '../ui/Section';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
-import { EXPERIENCES, EDUCATION } from '../../data';
+import { Briefcase, Calendar, MapPin, CheckCircle2 } from "lucide-react";
+import Section, { SectionHeader } from "../ui/Section";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { EXPERIENCES, EDUCATION } from "../../data";
 
 export default function Experience() {
   const expRef = useScrollAnimation<HTMLDivElement>();
@@ -32,9 +32,13 @@ export default function Experience() {
                       <Briefcase size={16} className="text-cyan-400" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-display text-xl font-semibold text-white">{exp.role}</h3>
+                      <h3 className="font-display text-xl font-semibold text-white">
+                        {exp.role}
+                      </h3>
                       <div className="flex flex-wrap items-center gap-3 mt-1">
-                        <span className="text-cyan-400 font-medium text-sm">{exp.company}</span>
+                        <span className="text-cyan-400 font-medium text-sm">
+                          {exp.company}
+                        </span>
                         <span className="text-slate-600 text-xs">•</span>
                         <span className="flex items-center gap-1 text-slate-500 text-xs font-mono">
                           <Calendar size={11} />
@@ -54,8 +58,14 @@ export default function Experience() {
                 <div className="px-6 pb-5 border-t border-[#1f2937] pt-4">
                   <ul className="space-y-2">
                     {exp.responsibilities.map((r, ri) => (
-                      <li key={ri} className="flex items-start gap-3 text-sm text-slate-400">
-                        <CheckCircle2 size={14} className="text-emerald-400 mt-0.5 shrink-0" />
+                      <li
+                        key={ri}
+                        className="flex items-start gap-3 text-sm text-slate-400"
+                      >
+                        <CheckCircle2
+                          size={14}
+                          className="text-emerald-400 mt-0.5 shrink-0"
+                        />
                         {r}
                       </li>
                     ))}
@@ -90,10 +100,16 @@ export default function Experience() {
                 className="bg-[#111827] rounded-xl border border-[#1f2937] p-5 hover:border-emerald-400/30 transition-all duration-300"
               >
                 <div className="w-8 h-8 rounded-lg bg-emerald-400/10 border border-emerald-400/20 flex items-center justify-center mb-4">
-                  <span className="text-emerald-400 text-xs font-bold">SBSc</span>
+                  <span className="text-emerald-400 text-xs font-bold">
+                    BSc
+                  </span>
                 </div>
-                <h4 className="font-display text-white font-semibold mb-1">{edu.degree}</h4>
-                <p className="text-emerald-400 text-sm font-medium">{edu.institution}</p>
+                <h4 className="font-display text-white font-semibold mb-1">
+                  {edu.degree}
+                </h4>
+                <p className="text-emerald-400 text-sm font-medium">
+                  {edu.institution}
+                </p>
                 <div className="flex items-center gap-1 text-slate-500 text-xs font-mono mt-2">
                   <Calendar size={11} />
                   {edu.dates}
@@ -104,15 +120,22 @@ export default function Experience() {
 
           {/* Quick facts */}
           <div className="mt-8 p-5 rounded-xl bg-[#111827] border border-[#1f2937]">
-            <p className="font-mono text-xs text-slate-500 tracking-widest uppercase mb-4">// Quick facts</p>
+            <p className="font-mono text-xs text-slate-500 tracking-widest uppercase mb-4">
+              // Quick facts
+            </p>
             <div className="space-y-3">
               {[
-                { label: 'Languages', value: 'Greek (native), English (fluent)' },
-                { label: 'Cloud certs', value: '6 active certifications' },
-                { label: 'Based in', value: 'Athens, Greece' },
+                {
+                  label: "Languages",
+                  value: "Greek (native), English (fluent)",
+                },
+                { label: "Cloud certs", value: "6 active certifications" },
+                { label: "Based in", value: "Athens, Greece" },
               ].map(({ label, value }) => (
                 <div key={label}>
-                  <p className="font-mono text-xs text-slate-600 mb-0.5">{label}</p>
+                  <p className="font-mono text-xs text-slate-600 mb-0.5">
+                    {label}
+                  </p>
                   <p className="text-slate-300 text-sm">{value}</p>
                 </div>
               ))}

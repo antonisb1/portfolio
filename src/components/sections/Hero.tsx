@@ -7,8 +7,8 @@ const TYPING_STRINGS = [
   "Cloud Engineer",
   "Azure Specialist",
   "GCP Architect",
-  "IaC Developer",
-  "Kubernetes Engineer",
+  // "IaC Developer",
+  // "Kubernetes Engineer",
 ];
 
 function TypingEffect() {
@@ -52,8 +52,13 @@ export default function Hero() {
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
-  const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  // const scrollToProjects = () => {
+  //   document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  // };
+  const scrollToExperience = () => {
+    document
+      .getElementById("experience")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -85,9 +90,9 @@ export default function Hero() {
         </div>
 
         <div>
-          <p className="text-slate-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-3">
+          {/* <p className="text-slate-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-3">
             {PERSON.tagline}
-          </p>
+          </p> */}
           <div className="flex items-center gap-2 text-slate-500 font-mono text-sm mb-10">
             <MapPin size={14} className="text-cyan-400" />
             {PERSON.location}
@@ -100,8 +105,8 @@ export default function Hero() {
             <Mail size={16} />
             Get in Touch
           </Button>
-          <Button variant="secondary" onClick={scrollToProjects}>
-            View Projects
+          <Button variant="secondary" onClick={scrollToExperience}>
+            View Experience
             <ChevronRight size={16} />
           </Button>
         </div>
@@ -112,7 +117,7 @@ export default function Hero() {
             { value: "2+", label: "Years Experience" },
             { value: "6", label: "Certifications" },
             { value: "3", label: "Cloud Platforms" },
-            { value: "∞", label: "Infrastructure Plans" },
+            // { value: "∞", label: "Infrastructure Plans" },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="font-display text-2xl font-bold text-white mb-1">

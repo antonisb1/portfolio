@@ -153,7 +153,11 @@ export default function Contact() {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: Github, href: "https://github.com/", label: "GitHub" },
+                {
+                  icon: Github,
+                  href: "https://github.com/antonisb1",
+                  label: "GitHub",
+                },
                 {
                   icon: Linkedin,
                   href: "https://linkedin.com/in/",
