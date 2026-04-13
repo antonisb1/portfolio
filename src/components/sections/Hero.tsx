@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowDown, Mail, ChevronRight, MapPin } from "lucide-react";
+import { Mail, ChevronRight, MapPin } from "lucide-react";
 import { PERSON } from "../../data";
 import Button from "../ui/Button";
 

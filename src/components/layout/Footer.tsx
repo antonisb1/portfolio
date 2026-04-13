@@ -1,4 +1,4 @@
-import { Terminal, Heart } from "lucide-react";
+import { Terminal } from "lucide-react";
 import { PERSON, NAV_ITEMS } from "../../data";
 
 export default function Footer() {
