@@ -30,9 +30,9 @@ const initialForm: FormState = {
   message: "",
 };
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = "service_e09aoow";
+const TEMPLATE_ID = "template_q9gofnn";
+const PUBLIC_KEY = "uNUk-hboVhnCrKpJw";
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>(initialForm);
