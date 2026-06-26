@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Bot } from "lucide-react";
 
 const GEMINI_ENDPOINT = "https://gemini-proxy.antonis-benardis.workers.dev";
-const MAX_MESSAGES = 3;
+const MAX_MESSAGES = 1;
 const MAX_TOKENS = 400;
 
 const SYSTEM_PROMPT = `You are a helpful assistant on Antonis Benardis's portfolio website.
